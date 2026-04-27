@@ -40,15 +40,13 @@ async function addDate() {
     console.log('LBC Date : Trying to add original post date to the page');
     let date = await getPostOriginalDate()
 
-    const el = document.querySelector('[data-qa-id="adview_date"]')
+    const el = document.querySelector('[data-qa-id="adview_spotlight_description_container"]')
 
     if (el !== null) {
-        el.textContent = 'Date de renouvellement : ' + el.textContent;
-        const parent = el.parentNode.parentNode
         var originalDateBlock = document.createElement('p');
-        originalDateBlock.textContent = 'Date d\'origine : ' + date;
-        parent.appendChild(originalDateBlock);
-        console.log('LBC Date : Original date successfully added to the page');
+        originalDateBlock.textContent = 'Date d\'origine de l\'annonce : ' + date;
+        el.appendChild(originalDateBlock);
+        console.log('LBC Date : Original date ' + date + ' successfully added to the page');
     }
 }
 

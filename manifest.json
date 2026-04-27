@@ -1,7 +1,7 @@
 {
-  "name": "LBC Date",
-  "description": "Get the original date of a post at LBC !",
-  "version": "1.0",
+  "name": "Date Leboncoin",
+  "description": "Permet d'obtenir la date réelle de mise en ligne d'une annonce, en plus de la date de renouvellement pour mieux négocier !",
+  "version": "1.2",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
@@ -13,6 +13,7 @@
     ],
     "js": ["content.js"]
   }],
+
   "host_permissions": [
     "https://www.leboncoin.fr/*"
   ],
